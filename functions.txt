@@ -1,0 +1,46 @@
+1. What is difference between Function Declaration and Function Expression?
+
+A: function declaration ----  function function_name(parammeters){}
+
+    Function Expression -----  const variable=function(parameters){};
+
+    The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions . the omitted function expression creates anonymous functions.
+
+
+2. Write down the syntax rules of an Arrow function.?
+
+A  function_name =(parameters) => {  };
+
+   if there is only one parameter and one block of code to return
+   function_name = parameter => logic;
+
+
+3. Using Function Declaration create a function which will add two numbers.
+
+A  function add(a,b){
+    return a+b;
+    }
+
+    console.log(add(10+20))
+
+4. Using Function Expression create a function which will multiply two numbers.
+
+A.  const multiply=function(a,b){
+    return a*b;
+};
+
+    console.log(multiply(a,b));
+
+5. Using Arrow Function create a function to subtract two numbers.
+
+   const subract=(a,b) => a-b;
+
+   console.log(subract(a,b));
+
+
+
+6. Create IIFE which will accept a string as argument and return the reversed string.
+  const func = ((str) => str.split("").reverse().join(""))("rithish")
+
+
+    console.log(func); 

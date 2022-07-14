@@ -1,0 +1,90 @@
+
+
+1. Write a condition that returns true for == but not === and explain why?
+
+A.  let a=10
+    let b='10'
+    if(a==b){
+        console.log('True');
+    }                                         //prints True
+    else
+        console.log('False')
+
+    if(a===b){
+        console.log('True');
+    }
+    else                                        //prints False
+        console.log('False')
+
+
+    "==" operator is used for comparision of two variables regardless of type
+    where as "===" checks for type of a variable
+
+
+
+
+2. Write a single if condition that returns true if x is greater than or equal to 10 and is even, or if x is less than 10 and is odd?
+
+A  let x=20
+    if((x>=10 && x%2===0)||(x<10 && x%2===1)){
+        console.log(true)
+    }
+
+3. Use a ternary operator to assign 'odd' or 'even' to a variable called 'output' by checking if a variable 'x' is odd or even ?
+A.  
+   let output='';
+   let x=5;
+   output=(x%2==0)?'even':'odd' ;
+
+4 .Using if/else if/else write a program that takes an input x (1-7) and prints corresponding weekday (1-Sunday etc).  If input is invalid print invalid input?
+   
+   let x=5;
+   if(x===1){
+    console.log("Sunday");
+   }
+   else if(x===2){
+     console.log("Monday");
+   }
+   else if(x===3){
+     console.log("Tuesday");
+   }
+   else if(x===4){
+     console.log("Wednesday");
+   }
+   else if(x===5){
+     console.log("Thrusday");
+   }
+   else if(x===6){
+     console.log("Friday");
+   }
+   else if(x===7){
+     console.log("Saturday");
+   }
+   else{
+    console.log("Invalid")
+   }
+
+
+
+5.  Solve question 4 using switch case ?
+
+    let x=5;
+    switch(x){
+        case 1:console.log("Sunday");
+        break;
+        case 2:console.log("Monday");
+        break;
+        case 3:console.log("Tuesday");
+        break;
+        case 4:console.log("Wednesday");
+        break;
+        case 5:console.log("Thrusday");
+        break;
+        case 6:console.log("Friday");
+        break;
+        case 7:console.log("Saturday");
+        break;
+        default:
+        console.log("Invalid Input")';
+
+    }
