@@ -40,7 +40,7 @@ A.  const multiply=function(a,b){
 
 
 6. Create IIFE which will accept a string as argument and return the reversed string.
-  const func = ((str) => str.split("").reverse().join(""))("rithish")
+  const fun = (name => name.split("").reverse().join(""))("rithish")
 
 
-    console.log(func); 
+    console.log(fun); 
