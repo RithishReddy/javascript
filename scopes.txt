@@ -1,0 +1,62 @@
+1. var a = 12;
+    (function() {
+    console.log(a);        // 12
+    })()
+
+
+var a = 5;
+(function() {
+  var a = 12;
+  console.log(a);         //12
+})();
+
+
+
+var a = 10;
+var x = (function() {
+  var a = 12;
+  return (function() {     //12
+    console.log(a);
+  });
+})();
+
+x();
+
+
+
+var a = 10;
+var x = (function() {
+  var y = function() {
+    var a = 12;
+  };                        //10
+  return function() {
+    console.log(a);
+  }
+})();
+x();
+
+
+
+
+var a = 10;
+var x = (function() {
+  (function() {
+    a = 12; // <<< look carefully at this line.
+  })();
+  return (function() {
+    console.log(a);
+  });                       //12
+})();
+x();
+
+
+
+
+var a = 10;
+(function() {
+  var a = 15;
+  window.x = function() {
+    console.log(a);
+  }
+})();
+x();             //15

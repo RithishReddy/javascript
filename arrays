@@ -1,0 +1,38 @@
+1. Is array passed by value or reference to a function. Justify your answer with an example.
+
+arrays are passed by reference
+
+for example,
+
+
+  let func=(arr)=>{
+    arr[2]=7;
+  }
+
+  let arr=[1,2,3,4,5]
+  func(arr)  
+  console.log(arr)  // prints [1,2,7,4,5]
+
+2. Write a Javascript function to clone an array without using loops.
+  
+
+  let a=[1,2,3,4,5]
+let b=a.slice(0,a.length)
+console.log(b)
+
+
+
+
+
+3. Breifly explain the below Array methods with examples
+shift, unshift, slice, splice, pop"
+
+
+    shift() is builtin function that deletes elements at beginning of array
+    unshift() is builtin function that adds elements at beginning of array
+    slice() is builtin function that returns a copy of elements ina an array
+    splice() method changes the contents of an array by removing or replacing existing elements 
+    pop() method deletes the last element in an array
+
+
+    
