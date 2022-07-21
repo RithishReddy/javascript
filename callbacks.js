@@ -1,34 +1,21 @@
-
-
-
-function myFilter(my_array, callback){
-   
-    let result = [];
- for (let number of my_array) {
-   if (callback(number)) 
-     result.push(number);
-   
+function getUsers() {
+   let users = [];
+ 
+   // delay 1 second (1000ms)
+   setTimeout(() => {
+     users = [
+       { username: 'john', email: 'john@test.com' },
+       { username: 'jane', email: 'jane@test.com' },
+     ];
+   }, 1000);
+ 
+   return users;
  }
- return result;
+
+function findUser(username) {
+ const users = getUsers();
+ const user = users.find((user) => user.username === username);
+ return user;
 }
 
- 
- 
- 
-
-
-function processData(inputArray) {
-   //In blank write anonymous function, which takes one parameter and returns true if its even or false if its odd.
-   console.log(myFilter(inputArray,x=>x%2===0));   
-} 
-
-process.stdin.resume();
-process.stdin.setEncoding("ascii");
-_input = "";
-process.stdin.on("data", function (input) {
-   _input += input;
-});
-
-process.stdin.on("end", function () {
-  processData(_input.split(' ').map(num => Number(num)));
-});
+console.log(findUser("john"));
